@@ -21,7 +21,7 @@ export function parseStr(input: unknown): unknown {
     } else if (typeof input === 'string') {
         return input.split(''); // string[]
     } else if (typeof input === 'number') {
-        return true;
+        return true;  // boolean
     }
 }
 
