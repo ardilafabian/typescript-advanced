@@ -4,7 +4,6 @@ import { addProduct, products } from "./products/product.service";
 
 for (let i = 0; i < 50; i++) {
     addProduct({
-        id: faker.datatype.uuid(),
         description: faker.commerce.productDescription(),
         image: faker.image.imageUrl(),
         color: faker.commerce.color(),
@@ -13,15 +12,8 @@ for (let i = 0; i < 50; i++) {
         isNew: faker.datatype.boolean(),
         tags: faker.random.arrayElements(),
         title: faker.commerce.productName(),
-        createdAt: faker.date.recent(),
-        updatedAt: faker.date.recent(),
         stock: faker.datatype.number({min:10, max:100}),
-        category: {
-            id: faker.datatype.uuid(),
-            name: faker.commerce.department(),
-            createdAt: faker.date.recent(),
-            updatedAt: faker.date.recent()
-        }
+        categoryid: faker.datatype.uuid(),
     });
 }
 
